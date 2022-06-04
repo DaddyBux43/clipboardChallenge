@@ -1,0 +1,593 @@
+// Imports
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+@import 'config';
+
+body {
+    font-family: "Bai Jamjuree";
+    font-size: 18px;
+    line-height: 1.6;
+    background: white;
+    color: $neutralGrayishBlue;
+}
+
+h1 {
+    color: $neutralDarkGrayishBlue;
+}
+
+//  clipboard Header Settings
+.mainBackground {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+}
+.mainHeader {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 600px;
+
+    .mainImg {
+        margin-top: 80px;
+    }
+
+    .mainHead {
+        color: $neutralDarkGrayishBlue;
+        font-size: 45px;
+        font-weight: 600;
+        margin-top: 50px;
+    }
+
+    .mainPara {
+        font-size: 20px;
+        margin: 10px 350px;
+    }
+
+    .mainBtn {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 15px;
+        margin-top: 50px;
+
+        .mainBtniOS {
+            background: $primaryStrongCyan;
+            border-bottom: solid 3px #209e88;
+            @include button;
+        }
+
+        .mainBtnMac {
+            background: $primaryLightBlue;
+            border-bottom: solid 3px #5265dc;
+            @include button;
+        }
+    }
+}
+
+// Snippets Settings
+.snippets {
+
+    .snippetsHeader {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        text-align: center;
+
+        .snippetsHead {
+            font-size: 35px;
+            font-weight: 600;
+            margin-top: 80px;
+        }
+
+        .snippetsPara {
+            font-weight: 300;
+            margin: 15px 370px 80px 370px;
+        }
+    }
+
+    .snippetsBody {
+        display: flex;
+        flex-wrap: wrap;
+        height: 700px;
+
+        .snippetsImg {
+            max-width: 752px;
+        }
+
+        .snippetsRight {
+            display: grid;
+            grid-template-columns: 394px auto;
+            grid-template-rows: repeat(6, 1fr);
+            justify-content: space-between;
+            align-items: start;
+            margin-left: 110px;
+            margin-top: 54px;
+
+            .snippetsSearch {
+                grid-column: 1;
+                grid-row: 1;
+                @include snippet;
+            }
+
+            .snippetsSync {
+                grid-column: 1;
+                grid-row: 2;
+                @include snippet;
+            }
+
+            .snippetsHistory {
+                grid-column: 1;
+                grid-row: 3;
+                @include snippet;
+            }
+        }
+    }
+}
+
+// Access Settings
+
+.access {
+    display: grid;
+    grid-template-columns: 270px 900px 270px;
+    grid-template-rows: 123.59px 600px;
+    text-align: center;
+
+    .accessHeader {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .accessHead {
+        grid-column: 2;
+        grid-row: 1;
+        font-size: 35px;
+        font-weight: 600;
+        padding-bottom: 10px;
+    }
+
+    .accessPara {
+        grid-column: 2;
+        grid-row: 2;
+        font-weight: 300;
+        margin: 0 120px;
+    }
+
+    .accessImg {
+        grid-column: 2;
+        grid-row: 2;
+        margin-top: 100px;
+    }
+}
+
+.workflow {
+    margin-top: 150px;
+
+    .workflowHeader {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        line-height: 2;
+
+        .workflowHead {
+            font-size: 35px;
+            font-weight: 600;
+        }
+
+        .workflowPara {
+            font-weight: 300;
+        }
+    }
+}
+
+.workflowIcons {
+    display: grid;
+    grid-template-columns: 382px 382px 382px;
+    justify-content: space-between;
+    text-align: center;
+    margin: 70px 80px 0 80px;
+
+    .workflowBlacklists {
+        @include flow;
+    }
+
+    .workflowSnippets {
+        @include flow;
+    }
+
+    .workflowPreview {
+        @include flow;
+    }
+}
+
+.brands {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 150px 60px 0 60px;
+}
+
+.clipboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 150px;
+
+    h1 {
+        font-size: 35px;
+        font-weight: 600;
+    }
+
+    p {
+        font-weight: 300;
+        margin: 15px 380px;
+    }
+}
+
+.clipboardBtn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 50px;
+
+    .clipboardBtniOS {
+        background: $primaryStrongCyan;
+        border-bottom: solid 3px #209e88;
+        @include button;
+    }
+
+    .clipboardBtnMac {
+        background: $primaryLightBlue;
+        border-bottom: solid 3px #5265dc;
+        @include button;
+    }
+}
+
+.info {
+    display: grid;
+    grid-template-columns: 300px 600px 540px;
+    // grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    background: #f5f6f8;
+    margin-top: 140px;
+    max-height: 150px;
+    font-size: 18px;
+    font-weight: 400;
+
+    .infoImg {
+        max-width: 55px;
+        margin-left: 160px;
+        margin-top: 30px;
+    }
+
+    .infoLinks {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 45px 45px;
+        gap: 0px;
+        justify-content: start;
+        align-items: end;
+        margin-top: 20px;
+        margin-left: 60px;
+
+        .link:nth-of-type(1) {
+            grid-column: 1;
+            grid-row: 1;
+        }
+        .link:nth-of-type(2) {
+            grid-column: 1;
+            grid-row: 2;
+        }
+        .link:nth-of-type(3) {
+            grid-column: 2;
+            grid-row: 1;
+        }
+        .link:nth-of-type(4) {
+            grid-column: 2;
+            grid-row: 2;
+        }
+        .link:nth-of-type(5) {
+            grid-column: 3;
+            grid-row: 1;
+        }
+
+        a:hover {
+            color: $primaryStrongCyan;
+        }
+
+        .infoFAQ {
+            text-decoration: none;
+            margin: 20px;
+            width: 80px;
+            color: $neutralDarkGrayishBlue;
+        }
+
+        .infoContact {
+            text-decoration: none;
+            margin: 20px;
+            width: 80px;
+            color: $neutralDarkGrayishBlue;
+        }
+
+        .infoPrivacy {
+            text-decoration: none;
+            margin: 20px;
+            width: 80px;
+            color: $neutralDarkGrayishBlue;
+        }
+
+        .infoPress {
+            text-decoration: none;
+            margin: 20px;
+            width: 80px;
+            color: $neutralDarkGrayishBlue;
+        }
+
+        .infoInstall {
+            text-decoration: none;
+            margin: 20px;
+            width: 80px;
+            color: $neutralDarkGrayishBlue;
+        }
+    }
+
+    .attribution {
+        margin-top: 40px;
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            color: $primaryStrongCyan;
+            font-size: 20px;
+        }
+    }
+}
+
+@media (max-width: 750px) {
+
+    .mainHeader {
+        display: block;
+
+        .mainHead {
+            font-size: 30px;
+            line-height: 1.3;
+            margin: 0 40px;
+        }
+
+        .mainPara {
+            font-size: 16px;
+            margin: 0 34px
+        }
+
+        .mainBtn {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+            margin: 50px 20px 0 20px;
+        }
+
+        .mainBtnMac {
+            min-width: 320px;
+        }
+
+        .mainBtniOS {
+            min-width: 320px;
+        }
+    }
+
+    .snippets {
+        display: block;
+
+        .snippetsHeader {
+
+            .snippetsHead {
+                font-size: 30px;
+            }
+
+            .snippetsPara {
+                font-size: 17px;
+                margin: 30px 24px 60px 24px;
+            }
+        }
+
+        .snippetsBody {
+            justify-content: center;
+            margin-left: 0;
+            margin-right: 0;
+
+            .snippetsImg {
+                width: 310px;
+            }
+
+            .snippetsRight {
+                display: grid;
+                grid-template-columns: minmax(300px, auto);
+                grid-template-rows: 127px 127px 127px;
+                justify-content: center;
+                margin: 50px 30px;
+                text-align: center;
+
+                .snippetsSearch {
+                    text-align: center;
+
+                    .snippetsSearchPara {
+                        margin-right: 0;
+                    }
+                }
+
+                .snippetsSync {
+                    text-align: center;
+
+                    .snippetsSyncHead {
+                        margin-top: 50px;
+                    }
+
+                    .snippetsSyncPara {
+                        margin-right: 0;
+                    }
+                }
+
+                .snippetsHistory {
+                    text-align: center;
+
+                    .snippetsHistoryHead {
+                        margin-top: 70px;
+                    }
+
+                    .snippetsHistoryPara {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .access {
+        display: block;
+
+        .accessHead {
+            font-size: 26px;
+            margin: 200px 80px 0 80px;
+            line-height: 1.4;
+        }
+
+        .accessPara {
+            font-size: 15px;
+            margin: 0 38px 0 38px;
+        }
+
+        .accessImg {
+            max-width: 340px;
+            margin-top: 60px;
+        }
+    }
+
+    .workflow {
+        display: block;
+        margin-top: 100px;
+
+        .workflowHeader {
+            display: block;
+
+            .workflowHead {
+                font-size: 30px;
+                line-height: 1.2;
+            }
+
+            .workflowPara {
+                font-size: 16px;
+                line-height: 1.6;
+                margin: 10px 40px;
+            }
+        }
+
+        .workflowIcons {
+            display: grid;
+            grid-template-columns: 1fr;
+            margin: 80px 10px;
+
+            .workflowBlacklistsPara {
+                line-height: 1.6;
+                margin-bottom: 55px;
+            }
+            .workflowSnippetsPara {
+                line-height: 1.6;
+                margin-bottom: 55px;
+            }
+            .workflowPreviewPara {
+                line-height: 1.6;
+                margin-bottom: 55px;
+            }
+        }
+    }
+
+    .brands {
+        display: block;
+        margin-top: 80px;
+        text-align: center;
+
+        .google {
+            width: 150px;
+        }
+        .ibm {
+            width: 120px;
+            margin-top: 60px;
+        }
+        .micro {
+            width: 140px;
+            margin-top: 60px;
+        }
+        .hp {
+            width: 110px;
+            margin-top: 60px;
+        }
+        .vect {
+            width: 100px;
+            margin-top: 60px;
+        }
+    }
+
+    .clipboard {
+
+        .clipboardHeader {
+
+            .clipboardHead {
+                font-size: 25px;
+                margin: 0 40px;
+                line-height: 1.4;
+            }
+
+            .clipboardPara {
+                font-size: 16px;
+                margin: 20px 37px;
+            }
+
+            .clipboardBtn {
+                margin-top: 40px;;
+                
+                .clipboardBtniOS {
+                    padding: 12px 80px;
+                    margin-top: 10px;
+                }
+                .clipboardBtnMac {
+                    padding: 12px 80px;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+    .info {
+        display: block;
+        text-align: center;
+        min-height: 500px;
+
+        .infoImg {
+            margin: 50px 20px 0px 20px;
+        }
+
+        .infoLinks {
+            display: block;
+            text-align: center;
+            margin: 35px 0;
+        }
+
+        .link {
+            margin-top: 20px;
+        }
+    }
+}
